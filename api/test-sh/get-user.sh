@@ -1,0 +1,2 @@
+curl -X GET http://localhost:4321/api/users \
+    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NmZlNmRkYTUxMmQ4MWM5YWEyZDZjMTQiLCJpYXQiOjE3Mjc5NTAzMTYsImV4cCI6MTcyODM4MjMxNn0.rAGvdwFZ6CquPoCgtzbwHI8dVymRg7VOpdv4zvQ6ftY" -s -w "%{http_code}" -o /dev/null
