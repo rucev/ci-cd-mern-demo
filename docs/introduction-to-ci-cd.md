@@ -10,7 +10,8 @@ Continuous Integration focuses on frequent code integration and automated testin
 
 Continuous Integration (CI) is a software development practice where team members integrate their code changes into a shared repository frequently, preferably several times a day. Each integration is verified by an automated build and tests to detect integration errors as quickly as possible. The key idea is to ensure that the software remains in a working state at all times, even as new features are added or bugs are fixed.
 
-> Knowing that software was successfully "built" with the latest changes is valuable, but knowing that software was built *correctly* is invaluable, as software defects will undoubtedly creep into a code base at some point. The reason you want to build *continuously* is to get rapid feedback so that you can find and fix problems throuhout the development lifecycle
+> Knowing that software was successfully "built" with the latest changes is valuable, but knowing that software was built *correctly* is invaluable, as software defects will undoubtedly creep into a code base at some point. The reason you want to build *continuously* is to get rapid feedback so that you can find and fix problems throuhout the development lifecycle.  
+[Continuous Integration *by Paul Duvall, Steve Matyas, and Andrew Glover*](https://martinfowler.com/books/duvall.html)
 
 Imagine a team of developers working on an e-commerce platform. Each developer works on a specific feature (for example, "save to buy later" or "recommended based on your searches") and commits their changes to the central repository multiple times throughout the day. As soon as a developer pushes their changes, the CI server detects the new commit, pulls the latest code, and triggers a series of automated processes:
 
