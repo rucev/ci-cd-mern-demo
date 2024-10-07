@@ -2,7 +2,7 @@
 
 ## About
 
-This repository is an introduction to the main concepts of CI/CD (Continuous Integration and Continuous Delivery), with a step-by-step guide on how to apply it to a MERN (MongoDB + Express + React + Node) project.
+This repository is an introduction to the main concepts of CI/CD *Continuous Integration and Continuous Deployment/Delivery*, with a step-by-step guide on how to apply it to a MERN *(MongoDB + Express + React + Node)* project.
 
 The goal of this project is to provide a hands-on introduction to setting up automated pipelines, testing, and deployment using GitHub Actions, Netlify, Render and Mongo Atlas.
 
