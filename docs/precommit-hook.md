@@ -53,4 +53,4 @@ This step integrates an additional layer of quality control in your workflow, co
 
 ## Next Steps
 
-Now that you've successfully set up a pipeline that runs on every push and integrated a pre-commit hook to test your code on every commit. These are essential steps toward maintaining code quality and automating your development process. From here, you can [learn more](./next-steps.md) more about CI/CD practices, explore more advanced features of Husky, and further improve yourpipelines with additional tools and optimizations.
+Now that you've successfully set up a pipeline that runs on every push and integrated a pre-commit hook to test your code on every commit. These are essential steps toward maintaining code quality and automating your development process. From here, you can [learn more](./keep-learning.md) more about CI/CD practices, explore more advanced features of Husky, and further improve yourpipelines with additional tools and optimizations.
