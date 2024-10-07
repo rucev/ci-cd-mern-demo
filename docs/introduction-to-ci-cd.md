@@ -2,13 +2,15 @@
 
 Once upon a time, software development faced constant challenges such as manual code integration, inconsistent environments, and lengthy release cycles. This often led to delays, bugs slipping into production, and frustrated development teams.
 
-Luckily for us, Continuous Integration and Continuous Delivery (CI/CD) are here to save the day. CI/CD addresses many pain points head-on by promoting a culture of automation, collaboration, and continuous improvement. By breaking down the separation between development, testing, and operations, CI/CD enables teams to deliver software in smaller, more frequent releases, facilitating faster feedback loops and mitigating risks associated with large, infrequent updates.
+Luckily for us, Continuous Integration and Continuous Delivery/Deployment (CI/CD) are here to save the day. CI/CD addresses many pain points head-on by promoting a culture of automation, collaboration, and continuous improvement. By breaking down the separation between development, testing, and operations, CI/CD enables teams to deliver software in smaller, more frequent releases, facilitating faster feedback loops and mitigating risks associated with large, infrequent updates.
 
 Continuous Integration focuses on frequent code integration and automated testing to maintain a stable codebase, while Continuous Delivery extends this practice to automate the entire software release process, enabling teams to deliver high-quality software to customers rapidly and reliably. Let's focus a bit more on each one.
 
 ## Continuous Integration
 
 Continuous Integration (CI) is a software development practice where team members integrate their code changes into a shared repository frequently, preferably several times a day. Each integration is verified by an automated build and tests to detect integration errors as quickly as possible. The key idea is to ensure that the software remains in a working state at all times, even as new features are added or bugs are fixed.
+
+> Knowing that software was successfully "built" with the latest changes is valuable, but knowing that software was built *correctly* is invaluable, as software defects will undoubtedly creep into a code base at some point. The reason you want to build *continuously* is to get rapid feedback so that you can find and fix problems throuhout the development lifecycle
 
 Imagine a team of developers working on an e-commerce platform. Each developer works on a specific feature (for example, "save to buy later" or "recommended based on your searches") and commits their changes to the central repository multiple times throughout the day. As soon as a developer pushes their changes, the CI server detects the new commit, pulls the latest code, and triggers a series of automated processes:
 
@@ -20,15 +22,31 @@ If any errors are detected during these automated processes, the CI server notif
 
 ## Continuous Delivery
 
-Continuous Delivery (CD) takes the principles of CI a step further by automating the entire software release process, from code integration to deployment in production-like environments. In a CD pipeline, every change that passes through the CI process is potentially shippable, meaning it could be deployed to production at any time with a single command. This approach minimizes manual interventions and reduces the time and risk associated with releasing software.
+Continuous Delivery (CD) builds on CI principles and goes a bit further by automating the entire software release process, from code integration to deployment in production-like environments. In a CD pipeline, every change that passes through the CI process is potentially shippable, meaning it could be deployed to production at any time with a single command. This approach minimizes manual interventions and reduces the time and risk associated with releasing software.
+
+> Performing manual build, test and deployment processes is boring and repetitive- far from the best use of people. People are expensive and valuable, and they should be focused on producing software that delights its users.  
+[Continuous Delivery *by Jez Humble and David Farley*](https://martinfowler.com/books/continuousDelivery.html)
 
 Building on the previous example, let's say the e-commerce platform's development team has implemented CD. Once the code changes have passed all automated tests and quality checks in the CI pipeline, they are automatically deployed to a staging or pre-production environment that closely resembles the production environment. This allows the team to conduct further testing, such as user acceptance testing (UAT) or performance testing, in an environment that mirrors the production environment as closely as possible.
 
 Once the changes have been validated in the staging environment and approved for release, they can be easily deployed to production with minimal manual intervention. This could involve automated deployment scripts or integration with deployment tools like Kubernetes or AWS CodeDeploy. By automating the deployment process and ensuring that every change is deployable, CD enables teams to release new features and updates to customers quickly and with confidence.
 
+## Continuous Deployment
+
+Continuous Deployment (CD, again) takes the principles of Continuous Delivery one step further by automating the entire software release process, from code integration to deployment into production, without any manual intervention. With Continuous Deployment, every code change that passes the automated testing stages is automatically deployed to the live production environment, making it possible to deliver features, bug fixes, or enhancements to customers as soon as they are ready.
+
+> Continuous deployment could be dismissed as a trivial subcategory within continuous  delivery, but this underestimates the radical simplicity of an automated pipeline that goes straight through from push to production.  
+[Continuous Deployment *by Valentina Servile*](https://www.oreilly.com/library/view/continuous-deployment/9781098146719/)
+
+Imagine the e-commerce platform implements a "Flash Sale" feature, allowing users to buy products at steep discounts for a limited time. The feature needs to be rolled out quickly due to changing market conditions. With Continuous Deployment, the developers can build the feature, commit the changes, and, after passing the automated checks, have it live in production within hours. No manual intervention is needed, and customers can start using the new feature almost instantly.
+
+
 ## CI/CD Pipeline
 
 A CI/CD pipeline is a series of automated steps that code changes go through from development to deployment. It ensures that every change made to the codebase is automatically built, tested, and deployed in a consistent and reliable manner.
+
+> At an abstract level, a deployment pipeline is an automated manifestation of your process for getting software from version control into the hands of your users.  
+[Continuous Delivery *by Jez Humble and David Farley*](https://martinfowler.com/books/continuousDelivery.html)
 
 Let's break down the key stages typically found in a CI/CD pipeline:
 

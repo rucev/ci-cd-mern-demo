@@ -80,7 +80,6 @@ Create an account on [Netlify](https://app.netlify.com/) and follow these steps:
 
     Add all environment variables. In this case we have to add a named VITE_API_URL and set it to the Render backend API URL.
 
-
 Now click "Deploy". After the deployment finishes, your frontend should be live. If your project uses React Router, you might need to configure an extra step for handling routes. Follow the instructions in [this link](https://create-react-app.dev/docs/deployment/#netlify).
 
 ### Handling CORS Issues
@@ -101,6 +100,9 @@ api.use(cors(corsOptions));
 
 Commit and push these changes, then manually redeploy your API. After this, the app should work without CORS problems.
 
+### Stop auto-deploy:
+No that everything works, go to the build settings and disable automatic deploys on push, this way we will manage with our pipeline when does the project deploy.
+
 ## Next Steps
 
-Now that the MERN app is successfully deployed, we can focus on automating testing and deployments using a CI/CD pipeline. Let's start with our [backend](./api-pipeline.md).
+Now that the MERN app is successfully deployed, we can focus on automating testing and deployments using a CI/CD pipeline. Let's start with our [frontend](./app-pipeline.md).
