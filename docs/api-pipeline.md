@@ -171,4 +171,4 @@ jobs:
 
 ## Next Steps
 
-But what if we make multiple commits throughout the day and only push once? If that one push fails, valuable test feedback may be lost among all the changes. To prevent this, we’ll set up a pre-commit hook using Husky, which will run the tests before each commit is made. Let's see how to [set up a precommit hook](./precommit-hook.md).
+Done it! Those are two perfectly functional pipelines, but does that mean we can not improve them even without adding new features? Obviously, it doesn't. [Let's see how we can refactor our pipelines](./refactor-pipeline.md).

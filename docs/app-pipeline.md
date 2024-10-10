@@ -114,20 +114,21 @@ jobs:
           npm install
           npm run test
           npm run build
+          rm -r dist
           
       - name: Deploy App on Netlify # Deploy only if tests pass
-          env:
-            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-            NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
-          run: |
-            npm install netlify-cli -g
-            cd app
-            touch netlify.toml
-            echo '[build.environment]' > netlify.toml
-            echo '  VITE_API_URL = "${{secrets.RENDER_API_URL}}"' >> netlify.toml
-            netlify build
-            netlify deploy --dir=./dist --prod
-            rm netlify.toml
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID}}
+        run: |
+          npm install netlify-cli -g
+          cd app
+          touch netlify.toml
+          echo '[build.environment]' > netlify.toml
+          echo '  VITE_API_URL = "${{secrets.RENDER_API_URL}}"' >> netlify.toml
+          netlify build
+          netlify deploy --dir=./dist --prod
+          rm netlify.toml
 ```
 
 ## Next Steps:

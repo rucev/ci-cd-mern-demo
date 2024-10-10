@@ -33,5 +33,6 @@ Follow the steps outlined in the guide to set up CI/CD for your project and auto
 2. [Initial deploy of a MERN project](./docs/deploy-mern-project.md)
 3. [Building the APP pipeline](./docs/app-pipeline.md)
 4. [Building the API pipeline](./docs/api-pipeline.md)
-5. [Adding a Pre-Commit Hook](./docs/precommit-hook.md)
-6. [Keep Learning](./docs/keep-learning.md)
+5. [Refactor the Pipelines](./docs/refactor-pipeline.md)
+6. [Adding a Pre-Commit Hook](./docs/precommit-hook.md)
+7. [Keep Learning](./docs/keep-learning.md)
